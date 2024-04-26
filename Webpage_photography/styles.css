@@ -1,0 +1,55 @@
+.header{
+    height: 100vh;
+    width: 100%;
+    background: url("https://images.pexels.com/photos/2395255/pexels-photo-2395255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+/* styles.css */
+
+
+
+.loginform {
+    height: 300px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border-radius: 5px;
+   
+}
+
+.loginform input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginform button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color:#D2B48C;
+    cursor: pointer;
+    display: block;
+}
+
+.loginform button:hover{
+    background-color:brown;
+}
+
+.but button:hover{
+    background-color:brown;
+}
+
+.but button{
+    background-color:#D2B48C;
+}
+
+
+
+
+
+
+
+
