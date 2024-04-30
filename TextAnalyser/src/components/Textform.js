@@ -56,14 +56,15 @@ export default function Textform(props) {
                         <input type="text" class="form-control" id="exampleInputEmail1" style={{backgroundColor : props.mode==='dark'?'grey':'white'}} aria-describedby="emailHelp" />
                         <p></p>!<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
                          */}
-                        <textarea class="form-control" value={text} style={{backgroundColor : props.mode==='dark'?'grey':'white'}} onChange={handleOnChange} id="TextBox" rows="10"></textarea>
+                        <textarea class="form-control" value={text} style={{backgroundColor : props.mode==='dark'?'skyblue':'white'}} onChange={handleOnChange} id="TextBox" rows="10"></textarea>
                     </div>
     
                     
-                    <button type="button" class="mx-1" onClick={Handleclick}>Convert to upper Case</button>
-                    <button type="button" class="mx-1" onClick={HandleLoclick}>Convert to Lower Case</button>
-                    <button type="button" class="mx-1" onClick={HandleCopyText}>Copy Text</button>
-                    <button type="button" class="mx-1" onClick={HandleExtraSpace}>Remove Extra Space</button>
+                    <button type="button" disabled={text.length===0} class="mx-1 my-1" onClick={Handleclick}>Convert to upper Case</button>
+                    <button type="button" disabled={text.length===0} class="mx-1 my-1" onClick={Handleclick}>Convert to upper Case</button>
+                    <button type="button" disabled={text.length===0} class="mx-1 my-1" onClick={HandleLoclick}>Convert to Lower Case</button>
+                    <button type="button" disabled={text.length===0} class="mx-1 my-1" onClick={HandleCopyText}>Copy Text</button>
+                    <button type="button" disabled={text.length===0} class="mx-1 my-1" onClick={HandleExtraSpace}>Remove Extra Space</button>
                 
                 </div>
 
@@ -71,7 +72,7 @@ export default function Textform(props) {
 
             <div class="container my-3" style={{color : props.mode==='dark'?'white':'black'}}>
                 <h1>Text Summary</h1>
-                <p>{text.split(" ").length} words and {text.length} characters</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length!=0}).length} words and {text.length} characters</p>
                 <h2>Preview</h2>
                 <p>{text.length>0?text:"Enter something"}</p>
             </div>
